@@ -1,12 +1,20 @@
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import ListaProdutos from "./pages/listaProdutos/ListaProdutos";
+import Home from "./pages/home/Home";
 
-import './App.css'
+export default function App(){
 
-function App() {
-  
-  return ( <>
-  <h1> Meu primeiro projeto React com TypeScript</h1> 
-  <p>aplicação funcionando! </p>
-  </>) 
+    return(
+ <>
+   <Header/>
+ <Routes>
+    <Route path="/" element= {<Home/>} />
+    <Route  path="/produtos" element= {<ListaProdutos/>}/>
+ </Routes>
+   <Footer/>
+ </>
+    )
 }
-
-export default App
+    
